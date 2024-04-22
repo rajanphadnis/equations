@@ -806,7 +806,7 @@ base class RealMatrix extends Matrix<double> with MathUtils {
 
     // The determinant of L and U is the product of the elements on the diagonal
     for (var i = 0; i < rowCount; ++i) {
-      prodL *= lu.first(i, i);
+      prodL *= lu[0](i, i);
       prodU *= lu[1](i, i);
     }
 
