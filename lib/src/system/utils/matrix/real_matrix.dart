@@ -324,6 +324,7 @@ base class RealMatrix extends Matrix<double> with MathUtils {
     // where 'det(A)' is the determinant of A and 'cof(A)^T' is the transposed
     // matrix of the cofactor matrix.
     final transpose = cofactorMatrix().transpose();
+    print(cofactorMatrix())
 
     // Multiplying each number by 1/det(A)
     final multiplier = 1 / determinant();
