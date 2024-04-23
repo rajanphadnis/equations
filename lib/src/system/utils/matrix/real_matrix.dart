@@ -613,7 +613,7 @@ base class RealMatrix extends Matrix<double> with MathUtils {
       }
     }
     }
-    except (Exception e) {
+    catch (Exception e) {
       print(e);
     }
 
