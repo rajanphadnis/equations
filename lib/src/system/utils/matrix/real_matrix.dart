@@ -804,7 +804,7 @@ base class RealMatrix extends Matrix<double> with MathUtils {
     // transformation!
     final lu = luDecomposition();
     print("lu: ");
-    print(lu)
+    print(lu);
 
     var prodL = 1.0;
     var prodU = 1.0;
