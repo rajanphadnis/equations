@@ -271,7 +271,11 @@ base class RealMatrix extends Matrix<double> with MathUtils {
     // Computing cofactors.
     for (var i = 0; i < rowCount; ++i) {
       for (var j = 0; j < columnCount; ++j) {
-        source[i][j] = pow(-1, i + j) * minor(i, j).determinant();
+        print("minor: ");
+        print(minor(i, j));
+        print("minor det: ");
+        print(minor(i, j).determinant());
+        source[i][j] = pow(-1, i + j + 2) * minor(i, j).determinant();
       }
     }
 
