@@ -582,7 +582,8 @@ base class RealMatrix extends Matrix<double> with MathUtils {
       growable: false,
     );
 
-    // Computing L and U
+    try {
+      // Computing L and U
     for (var i = 0; i < rowCount; ++i) {
       for (var k = i; k < rowCount; k++) {
         // Summation of L(i, j) * U(j, k)
@@ -611,6 +612,12 @@ base class RealMatrix extends Matrix<double> with MathUtils {
         }
       }
     }
+    }
+    except (Exception e) {
+      print(e);
+    }
+
+    
 
     return [
       RealMatrix.fromFlattenedData(
