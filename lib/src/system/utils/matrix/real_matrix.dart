@@ -271,8 +271,6 @@ base class RealMatrix extends Matrix<double> with MathUtils {
     // Computing cofactors.
     for (var i = 0; i < rowCount; ++i) {
       for (var j = 0; j < columnCount; ++j) {
-        print("minor: ");
-        print(minor(i, j));
         print("minor det: ");
         print(minor(i, j).determinant());
         source[i][j] = pow(-1, i + j + 2) * minor(i, j).determinant();
@@ -805,6 +803,8 @@ base class RealMatrix extends Matrix<double> with MathUtils {
     // way better than O(n!) from the Leibniz formula or the Laplace
     // transformation!
     final lu = luDecomposition();
+    print("lu: ");
+    print(lu)
 
     var prodL = 1.0;
     var prodU = 1.0;
